@@ -41,7 +41,7 @@ def test_create_db():
 	print "database creation test successful!"
 
 
-def setup():
+def _setup():
 	dbops = db_ops.dbops(db_name)
 	dbops.create_db()
 	for domain_name in domains:
@@ -52,12 +52,14 @@ def setup():
 	return dbops
 
 def test_db_funcs():
-	dbops = setup()
+	dbops = _setup()
 	assert dbops.count_rows("DOMAINS") == len(domains)
 	assert dbops.count_rows("PINGS") == len(pings)
 	for i in range(0, len(domains)):
 		assert dbops.retrieve_domain_name(i+1) == domains[i]
 	for i in range(0, len(pings)):
 		assert dbops.retrieve_ping_entry(i+1) == tuple([i+1] + pings[i])
+	for i in range(0, len(pings)):
+		assert dbops.retrieve_ping_result(pings[i][0]) == pings[i][1] 
 
 	print "database functions test successful!"

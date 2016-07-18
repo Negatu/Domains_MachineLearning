@@ -60,4 +60,7 @@ class dbops():
 		self.cur.execute(sql)
 		return (self.cur.fetchone())
 
-	# def retrieve_ping_for_domain(self, _ _domain_id)
+	def retrieve_ping_result(self, domain_id):
+		sql = "select * from PINGS where _domain_id="+ str(domain_id) +";"
+		self.cur.execute(sql)
+		return (self.cur.fetchone()[2])

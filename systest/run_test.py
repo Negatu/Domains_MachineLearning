@@ -7,3 +7,4 @@ import test_p1lib as tp1
 tdb.test_create_db()
 tdb.test_db_funcs()
 tp1.test_populate_dom_table()
+tp1.test_populate_ping_table()
