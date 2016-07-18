@@ -1,7 +1,9 @@
 
-import test_db_ops as t
+import test_db_ops as tdb
+import test_p1lib as tp1
 
-# Test script
+# Tests
 
-t.test_create_db()
-t.test_db_funcs()
+tdb.test_create_db()
+tdb.test_db_funcs()
+tp1.test_populate_dom_table()
