@@ -37,6 +37,14 @@ class dbops():
 	def commit(self):
 		self.conn.commit()
 
+	def disconnect(self):
+		self.conn.commit()
+		self.conn.close()
+
+	def connect(self):
+		self.conn = sqlite3.connect(self.db_file)
+		self.cur = self.conn.cursor()
+
 	def count_rows(self, table_name):
 		sql = "select count(*) from "+ table_name +";"
 		self.cur.execute(sql)

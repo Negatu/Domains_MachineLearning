@@ -8,3 +8,6 @@ tdb.test_create_db()
 tdb.test_db_funcs()
 tp1.test_populate_dom_table()
 tp1.test_populate_ping_table()
+tp1.test_populate_ping_table_multi_thread()
+
+print "ALL TESTS SUCCESSFUL! "
