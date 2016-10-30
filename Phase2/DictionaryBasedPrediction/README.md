@@ -1,0 +1,1 @@
+This uses the words.txt file to look up a domain name string. It will predict site is up if the string is the words.txt file. words.txt contains 3.5 million words from the English Language.

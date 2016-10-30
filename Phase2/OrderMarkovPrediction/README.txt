@@ -1,0 +1,1 @@
+This prediction is similar to an order-1 Markov model as it looks at which letter follows which on domains that are up or down and keeps a number to mark whether if the juxtaposed letters are more associated with domain names that are up or down. It then uses the model to look at the test data and predict whether the domain is up or down based on the letters. 
